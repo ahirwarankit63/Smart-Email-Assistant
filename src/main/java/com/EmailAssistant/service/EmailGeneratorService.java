@@ -68,7 +68,7 @@ public class EmailGeneratorService {
 
     private String buildPrompt(EmailRequest emailRequest) {
         StringBuilder prompt = new StringBuilder();
-        prompt.append("Generate a professional email reply for the following email content. Please don't generate the subject line. ");
+        prompt.append("Generate a professional email reply for the following email content. Please don't generate the subject line. And No need to write Okay here is email and all, start from dear/respected/Hi /Hello etc. ");
 
         if (emailRequest.getTone() != null && !emailRequest.getTone().isEmpty()) {
             prompt.append("Use a ").append(emailRequest.getTone()).append(" tone. ");
